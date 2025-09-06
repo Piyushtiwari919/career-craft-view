@@ -17,16 +17,16 @@ const FeaturesSection = () => {
       icon: Brain,
       title: "AI Analyzer",
       description: "Advanced AI analyzes your resume content, structure, and formatting to provide comprehensive insights.",
-      color: "text-brand-red",
-      bgColor: "bg-brand-red/10",
+      color: "text-brand-primary",
+      bgColor: "bg-brand-primary/10",
       delay: "0.1s"
     },
     {
       icon: BarChart3,
       title: "ATS Score",
       description: "Get your Applicant Tracking System compatibility score and learn how to improve it.",
-      color: "text-brand-green",
-      bgColor: "bg-brand-green/10",
+      color: "text-brand-secondary",
+      bgColor: "bg-brand-secondary/10",
       delay: "0.2s"
     },
     {
@@ -90,14 +90,14 @@ const FeaturesSection = () => {
         <div className="grid md:grid-cols-3 gap-8 text-center">
           <div className="animate-slide-up" style={{ animationDelay: "0.5s" }}>
             <div className="flex items-center justify-center mb-3">
-              <Zap className="h-8 w-8 text-brand-red mr-2" />
+              <Zap className="h-8 w-8 text-brand-primary mr-2" />
               <span className="text-3xl font-bold text-foreground">98%</span>
             </div>
             <p className="text-muted-foreground font-medium">Accuracy Rate</p>
           </div>
           <div className="animate-slide-up" style={{ animationDelay: "0.6s" }}>
             <div className="flex items-center justify-center mb-3">
-              <Target className="h-8 w-8 text-brand-green mr-2" />
+              <Target className="h-8 w-8 text-brand-secondary mr-2" />
               <span className="text-3xl font-bold text-foreground">50K+</span>
             </div>
             <p className="text-muted-foreground font-medium">Resumes Analyzed</p>

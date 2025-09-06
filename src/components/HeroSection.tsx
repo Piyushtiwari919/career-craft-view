@@ -85,21 +85,21 @@ const HeroSection = () => {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Skills Match</span>
-                    <span className="font-semibold text-brand-green">85%</span>
+                    <span className="font-semibold text-brand-secondary">85%</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">
-                    <div className="bg-brand-green h-2 rounded-full w-[85%] transition-all duration-1000 delay-300"></div>
+                    <div className="bg-brand-secondary h-2 rounded-full w-[85%] transition-all duration-1000 delay-300"></div>
                   </div>
                 </div>
               </div>
 
               {/* Floating Alert */}
-              <div className="absolute -top-4 -right-4 bg-brand-red text-white px-4 py-2 rounded-lg shadow-lg animate-bounce">
+              <div className="absolute -top-4 -right-4 bg-brand-primary text-white px-4 py-2 rounded-lg shadow-lg animate-bounce">
                 <span className="text-sm font-medium">+15% Interview Rate</span>
               </div>
 
               {/* Background Decoration */}
-              <div className="absolute -z-10 top-8 left-8 w-72 h-72 bg-gradient-to-br from-brand-red/20 to-brand-green/20 rounded-full blur-3xl"></div>
+              <div className="absolute -z-10 top-8 left-8 w-72 h-72 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 rounded-full blur-3xl"></div>
             </div>
           </div>
         </div>

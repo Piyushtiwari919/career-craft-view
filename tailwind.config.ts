@@ -56,8 +56,8 @@ export default {
           foreground: "hsl(var(--danger-foreground))",
         },
         brand: {
-          red: "hsl(var(--brand-red))",
-          green: "hsl(var(--brand-green))",
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
           black: "hsl(var(--brand-black))",
         },
         sidebar: {
