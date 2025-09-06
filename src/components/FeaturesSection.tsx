@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { 
   Brain, 
   BarChart3, 
-  GraduationCap,TrendingUp ,
+  GraduationCap,TrendingUp,MessagesSquare,
   Briefcase, 
   ArrowRight,
   Zap,
@@ -35,7 +35,7 @@ const FeaturesSection = () => {
       description: "Discover in-demand skills for your role and get personalized learning recommendations.",
       color: "text-accent",
       bgColor: "bg-accent/10",
-      delay: "0.3s"
+      delay: "0.2s"
     },
     {
       icon: Briefcase,
@@ -43,7 +43,7 @@ const FeaturesSection = () => {
       description: "Find relevant job opportunities and freelance projects tailored to your skillset.",
       color: "text-primary",
       bgColor: "bg-primary/10",
-      delay: "0.4s"
+      delay: "0.2s"
     },
     {
       icon:TrendingUp ,
@@ -51,8 +51,16 @@ const FeaturesSection = () => {
       description: "Trending jobs in market",
       color: "text-primary",
       bgColor: "bg-primary/10",
-      delay: "0.4s"
+      delay: "0.2s"
+    },{
+      icon:MessagesSquare ,
+      title:"Interview Questions",
+      description: "Get the interview questions from top product based companies in the market",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
+      delay: "0.2s"
     }
+      
   ];
 
   return (
