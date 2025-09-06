@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b glass-effect transition-all duration-300">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -31,7 +31,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                className="text-muted-foreground hover:text-foreground transition-all duration-200 font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-brand after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.name}
               </a>
@@ -54,10 +54,10 @@ const Navbar = () => {
 
             {/* Auth Buttons - Desktop */}
             <div className="hidden md:flex items-center space-x-2">
-              <Button variant="ghost" className="font-medium">
+              <Button variant="ghost" className="font-medium hover-lift">
                 Login
               </Button>
-              <Button className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg transition-all duration-300">
+              <Button className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg hover-lift transition-all duration-300">
                 Sign Up
               </Button>
             </div>

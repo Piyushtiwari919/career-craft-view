@@ -64,10 +64,10 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <Card 
               key={feature.title} 
-              className="p-6 shadow-card hover:shadow-xl transition-all duration-300 group animate-slide-up border-0 bg-card"
+              className="p-6 shadow-card hover:shadow-xl transition-all duration-200 group animate-slide-up border-0 bg-card hover-lift"
               style={{ animationDelay: feature.delay }}
             >
-              <div className={`h-12 w-12 rounded-lg ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`h-12 w-12 rounded-lg ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
                 <feature.icon className={`h-6 w-6 ${feature.color}`} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -78,7 +78,7 @@ const FeaturesSection = () => {
               </p>
               <Button 
                 variant="ghost" 
-                className="p-0 h-auto font-medium group-hover:translate-x-1 transition-transform duration-200"
+                className="p-0 h-auto font-medium group-hover:translate-x-2 transition-all duration-200 hover:text-primary"
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

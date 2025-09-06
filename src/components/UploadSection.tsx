@@ -38,7 +38,7 @@ const UploadSection = () => {
   return (
     <section className="py-16 px-4" id="upload">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12 animate-fade-in">
+        <div className="text-center mb-12 animate-scale-in">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Analyze Your Resume with AI
           </h2>
@@ -49,7 +49,7 @@ const UploadSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Upload Section */}
-          <Card className="p-8 shadow-card animate-slide-up">
+          <Card className="p-8 shadow-card animate-slide-up hover-lift">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold text-foreground mb-2">Upload Resume</h3>
               <p className="text-muted-foreground">
@@ -115,7 +115,7 @@ const UploadSection = () => {
           </Card>
 
           {/* Job Details Section */}
-          <Card className="p-8 shadow-card animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <Card className="p-8 shadow-card animate-slide-up hover-lift" style={{ animationDelay: "0.2s" }}>
             <div className="mb-6">
               <h3 className="text-2xl font-semibold text-foreground mb-2">Job Details</h3>
               <p className="text-muted-foreground">
@@ -133,7 +133,7 @@ const UploadSection = () => {
                   <Input
                     id="job-role"
                     placeholder="e.g., Software Engineer, Data Scientist"
-                    className="pl-10"
+                    className="pl-10 smooth-focus"
                   />
                 </div>
               </div>
@@ -147,7 +147,7 @@ const UploadSection = () => {
                   <Input
                     id="salary-range"
                     placeholder="e.g., $80,000 - $120,000"
-                    className="pl-10"
+                    className="pl-10 smooth-focus"
                   />
                 </div>
               </div>
@@ -161,13 +161,13 @@ const UploadSection = () => {
                   <Input
                     id="company"
                     placeholder="e.g., Google, Microsoft, Startup"
-                    className="pl-10"
+                    className="pl-10 smooth-focus"
                   />
                 </div>
               </div>
 
               <Button 
-                className="w-full gradient-brand text-white font-medium shadow-brand hover:shadow-lg transition-all duration-300"
+                className="w-full gradient-brand text-white font-medium shadow-brand hover:shadow-lg hover-lift transition-all duration-300"
                 size="lg"
               >
                 Analyze Resume

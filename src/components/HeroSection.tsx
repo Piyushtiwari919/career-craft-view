@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-8 animate-scale-in">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Smart Resume 
@@ -39,7 +39,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg transition-all duration-300 group"
+                className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg hover-lift transition-all duration-300 group"
               >
                 Get Started Free
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -47,7 +47,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="font-medium group hover:bg-muted/50 transition-all duration-300"
+                className="font-medium group hover:bg-muted/50 hover-lift transition-all duration-300"
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                 Watch Demo
