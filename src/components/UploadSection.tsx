@@ -51,8 +51,8 @@ const UploadSection = () => {
           {/* Upload Section */}
           <Card className="bg-[#003049] p-8 shadow-card animate-slide-up hover-lift">
             <div className="mb-6">
-              <h3 className="text-2xl bg-transparent font-semibold text-foreground mb-2">Upload Resume</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl text-white bg-transparent font-semibold text-foreground mb-2">Upload Resume</h3>
+              <p className="text-muted-foreground text-white">
                 Drag and drop your resume or click to browse
               </p>
             </div>
