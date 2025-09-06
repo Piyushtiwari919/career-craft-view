@@ -47,7 +47,7 @@ const FeaturesSection = () => {
     },
     {
       icon:TrendingUp ,
-      title:Trending Jobs,
+      title:"Trending Jobs",
       description: "Trending jobs in market",
       color: "text-primary",
       bgColor: "bg-primary/10",
