@@ -88,12 +88,12 @@ const UploadSection = () => {
                 </div>
               ) : (
                 <div className="space-y-4">
-                  <Upload className="h-12 w-12 text-muted-foreground mx-auto" />
+                  <Upload className="h-12 w-12 text-white text-muted-foreground mx-auto" />
                   <div>
-                    <p className="text-lg font-medium text-foreground mb-2">
+                    <p className="text-lg font-medium text-white text-foreground mb-2">
                       Drop your resume here
                     </p>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-muted-foreground text-white mb-4">
                       Supports PDF, DOC, DOCX files up to 10MB
                     </p>
                     <label htmlFor="resume-upload">
