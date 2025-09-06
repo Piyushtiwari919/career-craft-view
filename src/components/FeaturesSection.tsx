@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { 
   Brain, 
   BarChart3, 
-  GraduationCap, 
+  GraduationCap,trending-up,
   Briefcase, 
   ArrowRight,
   Zap,
@@ -41,6 +41,14 @@ const FeaturesSection = () => {
       icon: Briefcase,
       title: "Freelancing & Jobs",
       description: "Find relevant job opportunities and freelance projects tailored to your skillset.",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
+      delay: "0.4s"
+    },
+    {
+      icon:trending-up,
+      title:Trending Jobs,
+      description: "Trending jobs in market",
       color: "text-primary",
       bgColor: "bg-primary/10",
       delay: "0.4s"
