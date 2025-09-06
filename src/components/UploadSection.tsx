@@ -49,9 +49,9 @@ const UploadSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Upload Section */}
-          <Card className="bg-blue-500 p-8 shadow-card animate-slide-up hover-lift">
+          <Card className="bg-[#003049] p-8 shadow-card animate-slide-up hover-lift">
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold text-foreground mb-2">Upload Resume</h3>
+              <h3 className="text-2xl bg-transparent font-semibold text-foreground mb-2">Upload Resume</h3>
               <p className="text-muted-foreground">
                 Drag and drop your resume or click to browse
               </p>
