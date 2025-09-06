@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { 
   Brain, 
   BarChart3, 
-  GraduationCap,trending-up,
+  GraduationCap,TrendingUp ,
   Briefcase, 
   ArrowRight,
   Zap,
@@ -46,7 +46,7 @@ const FeaturesSection = () => {
       delay: "0.4s"
     },
     {
-      icon:trending-up,
+      icon:TrendingUp ,
       title:Trending Jobs,
       description: "Trending jobs in market",
       color: "text-primary",
