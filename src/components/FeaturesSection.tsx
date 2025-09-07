@@ -94,7 +94,7 @@ const FeaturesSection = () => {
               </p>
               <Button 
                 variant="ghost" 
-                className="p-0 h-auto font-medium group-hover:translate-x-2 transition-all duration-200 hover:text-primary"
+                className="p-0 h-auto font-medium group-hover:translate-x-2 transition-all duration-200"
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -110,13 +110,6 @@ const FeaturesSection = () => {
               <span className="text-3xl font-bold text-foreground">98%</span>
             </div>
             <p className="text-muted-foreground font-medium">Accuracy Rate</p>
-          </div>
-          <div className="animate-slide-up" style={{ animationDelay: "0.6s" }}>
-            <div className="flex items-center justify-center mb-3">
-              <Target className="h-8 w-8 text-brand-secondary mr-2" />
-              <span className="text-3xl font-bold text-foreground">50K+</span>
-            </div>
-            <p className="text-muted-foreground font-medium">Resumes Analyzed</p>
           </div>
           <div className="animate-slide-up" style={{ animationDelay: "0.7s" }}>
             <div className="flex items-center justify-center mb-3">
