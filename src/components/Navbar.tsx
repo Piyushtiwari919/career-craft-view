@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2">
             <div className="flex h-12 w-12 items-center justify-center">
 {/*               <FileText className="h-6 w-6 text-white" /> */}
-              <img src={logo} alt="SnapCV"/>
+              <img src={logo} alt="SnapCV" className="h-full w-full object-contain"/>
             </div>
             <span className="text-xl font-bold text-foreground">SnapCV</span>
           </div>
