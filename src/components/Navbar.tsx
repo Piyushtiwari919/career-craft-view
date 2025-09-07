@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, FileText, Menu, X } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
-import logo from "src/components/SnapCV Logo.jpg";
+import logo from "./SnapCV-Logo.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg gradient-brand">
 {/*               <FileText className="h-6 w-6 text-white" /> */}
-              <img src={logo}/>
+              <img src={logo} alt="SnapCV"/>
             </div>
             <span className="text-xl font-bold text-foreground">SnapCV</span>
           </div>
