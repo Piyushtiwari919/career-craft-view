@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="flex h-16 w-16 items-center justify-center">
+            <div className="flex h-20 w-20 items-center justify-center">
 {/*               <FileText className="h-6 w-6 text-white" /> */}
               <img src={logo} alt="SnapCV" className="h-full w-full object-contain"/>
             </div>
