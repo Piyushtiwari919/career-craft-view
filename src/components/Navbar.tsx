@@ -56,10 +56,10 @@ const Navbar = () => {
 
             {/* Auth Buttons - Desktop */}
             <div className="hidden md:flex items-center space-x-2">
-              <Button variant="ghost" className="font-medium hover-lift">
+              <Button variant="ghost" className="font-medium">
                 Login
               </Button>
-              <Button className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg hover-lift transition-all duration-300">
+              <Button className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg transition-all duration-300">
                 Sign Up
               </Button>
             </div>
