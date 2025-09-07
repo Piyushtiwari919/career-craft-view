@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b glass-effect transition-all duration-300 bg-amber-200">
+    <nav className="sticky top-0 z-50 w-full border-b glass-effect transition-all duration-300">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
