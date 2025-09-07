@@ -3,7 +3,7 @@ import { ArrowRight, Play, CheckCircle } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="py-20 px-4 overflow-hidden" id="home">
+    <section className="py-20 px-4 overflow-hidden bg-pink-200" id="home">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
