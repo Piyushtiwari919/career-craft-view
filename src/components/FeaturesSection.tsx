@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Zap,
   Target,
-  TrendingUp 
+  
 } from "lucide-react";
 
 const FeaturesSection = () => {
