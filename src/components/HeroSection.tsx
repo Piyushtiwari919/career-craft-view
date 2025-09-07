@@ -3,7 +3,7 @@ import { ArrowRight, Play, CheckCircle } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="py-20 px-4 overflow-hidden bg-pink-200" id="home">
+    <section className="py-20 px-4 overflow-hidden bg-gradient-to-r from-indigo-50 via-white to-cyan-50" id="home">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -47,7 +47,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="font-medium group hover:hover-lift text-blue-600 transition-all duration-300"
+                className="font-medium group hover:hover-lift text-blue-400 transition-all duration-300"
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 text-red-700 transition-transform duration-200" />
                 Watch Demo
