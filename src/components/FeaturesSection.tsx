@@ -94,7 +94,7 @@ const FeaturesSection = () => {
               </p>
               <Button 
                 variant="ghost" 
-                className="p-0 h-auto font-medium group-hover:translate-x-2 transition-all duration-200"
+                className="p-0 h-auto font-medium group-hover:translate-x-2 hover:bg-white transition-all duration-100"
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
