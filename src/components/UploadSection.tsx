@@ -9,6 +9,13 @@ const UploadSection = () => {
   const [dragOver, setDragOver] = useState(false);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
+  // 🔹 New states
+  const [jobRole, setJobRole] = useState("");
+  const [salaryRange, setSalaryRange] = useState("");
+  const [company, setCompany] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
     setDragOver(true);
@@ -32,6 +39,36 @@ const UploadSection = () => {
     const files = e.target.files;
     if (files && files.length > 0) {
       setUploadedFile(files[0]);
+    }
+  };
+
+  // 🔹 API call to backend
+  const handleAnalyze = async () => {
+    if (!uploadedFile) {
+      alert("Please upload a resume file first");
+      return;
+    }
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append("resume", uploadedFile);
+    formData.append("jobRole", jobRole);
+    formData.append("salaryRange", salaryRange);
+    formData.append("company", company);
+
+    try {
+      const res = await fetch("http://localhost:5000/analyze", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      setResult(data);
+    } catch (err) {
+      console.error(err);
+      alert("Error analyzing resume");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -134,6 +171,8 @@ const UploadSection = () => {
                     id="job-role"
                     placeholder="e.g., Software Engineer, Data Scientist"
                     className="pl-10 smooth-focus"
+                    value={jobRole}
+                    onChange={(e) => setJobRole(e.target.value)}
                   />
                 </div>
               </div>
@@ -148,6 +187,8 @@ const UploadSection = () => {
                     id="salary-range"
                     placeholder="e.g., $80,000 - $120,000"
                     className="pl-10 smooth-focus"
+                    value={salaryRange}
+                    onChange={(e) => setSalaryRange(e.target.value)}
                   />
                 </div>
               </div>
@@ -162,16 +203,27 @@ const UploadSection = () => {
                     id="company"
                     placeholder="e.g., Google, Microsoft, Startup"
                     className="pl-10 smooth-focus"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
                   />
                 </div>
               </div>
 
               <Button 
+                onClick={handleAnalyze}
+                disabled={loading}
                 className="w-full gradient-brand text-white font-medium shadow-brand hover:shadow-lg hover-lift transition-all duration-300"
                 size="lg"
               >
-                Analyze Resume
+                {loading ? "Analyzing..." : "Analyze Resume"}
               </Button>
+
+              {result && (
+                <div className="mt-6 p-4 border rounded">
+                  <h3 className="font-bold text-lg">ATS Score: {result.score}/100</h3>
+                  <p className="mt-2 text-muted-foreground">{result.feedback}</p>
+                </div>
+              )}
             </div>
           </Card>
         </div>

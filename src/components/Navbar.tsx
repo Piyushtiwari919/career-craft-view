@@ -1,8 +1,17 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, FileText, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import logo from "./SnapCV-Logo.jpg";
+
+// Clerk imports
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +30,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="flex h-20 w-20 items-center justify-center">
-{/*               <FileText className="h-6 w-6 text-white" /> */}
-              <img src={logo} alt="SnapCV" className="h-full w-full object-contain"/>
+              <img src={logo} alt="SnapCV" className="h-full w-full object-contain" />
             </div>
             <span className="text-xl font-bold text-foreground">SnapCV</span>
           </div>
@@ -54,15 +62,25 @@ const Navbar = () => {
               <span className="sr-only">Toggle theme</span>
             </Button>
 
-            {/* Auth Buttons - Desktop */}
-            <div className="hidden md:flex items-center space-x-2">
-              <Button variant="ghost" className="font-medium">
-                Login
-              </Button>
-              <Button className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg transition-all duration-300">
-                Sign Up
-              </Button>
-            </div>
+            {/* Auth Buttons */}
+            <SignedOut>
+              <div className="hidden md:flex items-center space-x-2">
+                <SignInButton mode="modal">
+                  <Button variant="ghost" className="font-medium">
+                    Login
+                  </Button>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                  <Button className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg transition-all duration-300">
+                    Sign Up
+                  </Button>
+                </SignUpButton>
+              </div>
+            </SignedOut>
+
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
 
             {/* Mobile Menu Button */}
             <Button
@@ -71,11 +89,7 @@ const Navbar = () => {
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -94,14 +108,25 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 px-3 pt-3 border-t">
-                <Button variant="ghost" className="justify-start font-medium">
-                  Login
-                </Button>
-                <Button className="gradient-brand text-white font-medium shadow-brand">
-                  Sign Up
-                </Button>
-              </div>
+              <SignedOut>
+                <div className="flex flex-col space-y-2 px-3 pt-3 border-t">
+                  <SignInButton mode="modal">
+                    <Button variant="ghost" className="justify-start font-medium">
+                      Login
+                    </Button>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <Button className="gradient-brand text-white font-medium shadow-brand">
+                      Sign Up
+                    </Button>
+                  </SignUpButton>
+                </div>
+              </SignedOut>
+              <SignedIn>
+                <div className="px-3 pt-3 border-t">
+                  <UserButton afterSignOutUrl="/" />
+                </div>
+              </SignedIn>
             </div>
           </div>
         )}

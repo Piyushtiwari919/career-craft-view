@@ -44,6 +44,7 @@ const HeroSection = () => {
                 Get Started Free
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Button>
+              <a href="www.youtube.com" target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline" 
                 size="lg" 
@@ -52,6 +53,7 @@ const HeroSection = () => {
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 text-red-700 transition-transform duration-200" />
                 Watch Demo
               </Button>
+              </a>
             </div>
 
             {/* Trust Indicators */}

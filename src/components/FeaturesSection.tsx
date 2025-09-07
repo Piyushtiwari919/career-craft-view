@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Zap,
   Target,
-  TrendingUp 
+  
 } from "lucide-react";
 
 const FeaturesSection = () => {
@@ -20,6 +20,7 @@ const FeaturesSection = () => {
       color: "text-brand-primary",
       bgColor: "bg-brand-primary/10",
       delay: "0.1s"
+      // link: "https://example.com/ai-analyzer"
     },
     {
       icon: BarChart3,
@@ -28,6 +29,7 @@ const FeaturesSection = () => {
       color: "text-brand-secondary",
       bgColor: "bg-brand-secondary/10",
       delay: "0.2s"
+      // link: "https://example.com/ats-score"
     },
     {
       icon: GraduationCap,
@@ -36,6 +38,7 @@ const FeaturesSection = () => {
       color: "text-accent",
       bgColor: "bg-accent/10",
       delay: "0.2s"
+      // link: "https://example.com/skill-update"
     },
     {
       icon: Briefcase,
@@ -44,23 +47,26 @@ const FeaturesSection = () => {
       color: "text-primary",
       bgColor: "bg-primary/10",
       delay: "0.2s"
+      // link: "https://example.com/freelancing-jobs"
     },
     {
-      icon:TrendingUp ,
-      title:"Trending Jobs",
+      icon: TrendingUp,
+      title: "Trending Jobs",
       description: "Trending jobs in market",
       color: "text-primary",
       bgColor: "bg-primary/10",
       delay: "0.2s"
-    },{
-      icon:MessagesSquare ,
-      title:"Interview Questions",
+      // link: "https://example.com/trending-jobs"
+    },
+    {
+      icon: MessagesSquare,
+      title: "Interview Questions",
       description: "Get the interview questions from top product based companies in the market",
       color: "text-primary",
       bgColor: "bg-primary/10",
-      delay: "0.2s"
+      delay: "0.2s",
+      link: "https://drive.google.com/drive/mobile/folders/1Txer4_U8Q7NOeBCKLZyBLf5rhhwP-lt0?fbclid=PAZnRzaAMpUfZleHRuA2FlbQIxMQABp2vvZbSmwkYmeKE7sBN8XC4eLy8lZqzz2Ta1s2sDc1ib1-A5x6ecqLWDH3TD_aem_mkkZXdZD_m8zykr5jcc0tg"
     }
-      
   ];
 
   return (
@@ -82,22 +88,33 @@ const FeaturesSection = () => {
               key={feature.title} 
               className="p-6 shadow-card hover:shadow-xl transition-all duration-200 group animate-slide-up border-0 bg-card hover-lift overflow-hidden"
               style={{ animationDelay: feature.delay }}
+              
             >
               <div className={`h-12 w-12 rounded-lg ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
                 <feature.icon className={`h-6 w-6 ${feature.color}`} />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                {feature.title}
-              </h3>
+             
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 {feature.description}
               </p>
-              <Button 
-                variant="ghost" 
-                className="p-0 h-auto font-medium group-hover:translate-x-2 hover:bg-transparent hover:text-primary transition-all duration-100"
-              >
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              
+              {feature.link ? (
+                <a
+                  href={feature.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center p-0 h-auto font-medium group-hover:translate-x-2 hover:bg-transparent hover:text-primary transition-all duration-100 text-primary"
+                >
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              ) : (
+                <Button 
+                  variant="ghost" 
+                  className="p-0 h-auto font-medium group-hover:translate-x-2 hover:bg-transparent hover:text-primary transition-all duration-100"
+                >
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              )}
               <div className="absolute bottom-0 left-0 w-full">
                 <span className="block h-[3px] w-0 bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
               </div>
