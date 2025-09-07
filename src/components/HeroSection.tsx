@@ -47,7 +47,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="font-medium group hover:bg-muted/50 hover-lift text-blue-600 transition-all duration-300"
+                className="font-medium group hover:hover-lift text-blue-600 transition-all duration-300"
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 text-red-700 transition-transform duration-200" />
                 Watch Demo
