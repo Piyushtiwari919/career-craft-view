@@ -80,7 +80,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <Card 
               key={feature.title} 
-              className="p-6 shadow-card hover:shadow-xl transition-all duration-200 group animate-slide-up border-0 bg-card hover-lift"
+              className="p-6 shadow-card hover:shadow-xl transition-all duration-200 group animate-slide-up border-0 bg-card hover-lift overflow-hidden"
               style={{ animationDelay: feature.delay }}
             >
               <div className={`h-12 w-12 rounded-lg ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
