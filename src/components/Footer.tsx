@@ -32,7 +32,7 @@ const Footer = () => {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg gradient-brand">
                 <FileText className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-foreground">ResumeAI</span>
+              <span className="text-xl font-bold text-foreground">SnapCV</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               AI-powered resume analysis and career optimization platform. 
@@ -89,7 +89,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 ResumeAI. All rights reserved.
+            © 2025 SnapCV. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a 

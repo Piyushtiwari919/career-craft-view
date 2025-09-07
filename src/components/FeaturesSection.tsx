@@ -80,7 +80,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <Card 
               key={feature.title} 
-              className="p-6 shadow-card hover:shadow-xl transition-all duration-200 group animate-slide-up border-0 bg-card hover-lift"
+              className="p-6 shadow-card hover:shadow-xl transition-all duration-200 group animate-slide-up border-0 bg-card hover-lift overflow-hidden"
               style={{ animationDelay: feature.delay }}
             >
               <div className={`h-12 w-12 rounded-lg ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
@@ -94,10 +94,13 @@ const FeaturesSection = () => {
               </p>
               <Button 
                 variant="ghost" 
-                className="p-0 h-auto font-medium group-hover:translate-x-2 transition-all duration-200 hover:text-primary"
+                className="p-0 h-auto font-medium group-hover:translate-x-2 hover:bg-transparent hover:text-primary transition-all duration-100"
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+              <div className="absolute bottom-0 left-0 w-full">
+                <span className="block h-[3px] w-0 bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
+              </div>
             </Card>
           ))}
         </div>
@@ -110,13 +113,6 @@ const FeaturesSection = () => {
               <span className="text-3xl font-bold text-foreground">98%</span>
             </div>
             <p className="text-muted-foreground font-medium">Accuracy Rate</p>
-          </div>
-          <div className="animate-slide-up" style={{ animationDelay: "0.6s" }}>
-            <div className="flex items-center justify-center mb-3">
-              <Target className="h-8 w-8 text-brand-secondary mr-2" />
-              <span className="text-3xl font-bold text-foreground">50K+</span>
-            </div>
-            <p className="text-muted-foreground font-medium">Resumes Analyzed</p>
           </div>
           <div className="animate-slide-up" style={{ animationDelay: "0.7s" }}>
             <div className="flex items-center justify-center mb-3">
