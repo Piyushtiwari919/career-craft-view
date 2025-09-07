@@ -98,7 +98,9 @@ const FeaturesSection = () => {
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <span className="absolute bottom-0 left-0 h-[3px] w-0 bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
+              <div className="absolute bottom-0 left-0 w-full">
+                <span className="block h-[3px] w-0 bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
+              </div>
             </Card>
           ))}
         </div>
