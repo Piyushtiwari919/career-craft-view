@@ -39,7 +39,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg hover-lift transition-all duration-300 group"
+                className="gradient-brand text-white font-medium shadow-brand hover:shadow-lg text-blue-600 hover-lift transition-all duration-300 group"
               >
                 Get Started Free
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
